@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Task</title>
+</head>
+
+<body>
+    <script>
+        const http = new XMLHttpRequest()
+        const url = "https://jsonplaceholder.typicode.com/posts";
+        const body = {
+            title: 'foo', body: 'bar', userId: 1
+        }
+        http.open('POST', url)
+        http.setRequestHeader('Content-type', 'application/json')
+        http.send(JSON.stringify(body))
+        http.onload = function() {
+            alert(http.responseText)
+        }
+    </script>
+    <!-- TODO: Begin here -->
+    <!-- Remember to use HTML ONLY to solve this task-->
+
+
+</body>
+
+</html>
